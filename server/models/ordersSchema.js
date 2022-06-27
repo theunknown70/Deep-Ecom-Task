@@ -1,22 +1,25 @@
 import mongoose from 'mongoose';
 
 const ordersSchema = mongoose.Schema({
-    Invoice_Number: String,
-    Invoice_Date: String,
-    Transaction_Type: String,
-    Order_Id: String,	
-    Shipment_Id: String,
-    Shipment_Date: String,
-    Order_Date: String,
-    Shipment_Item_Id: String,
-    Item_Description: String,
-    Asin: String,
-    Hsn_sac: String,
-    Sku: String,
-    Ship_To_State: String,
-    pincode: String,
-    Invoice_Amount: String,
-    gst: String,
+    orderDetails: {
+        "Invoice Number": String, 
+        "Invoice Date": String,
+        "Transaction Type": String,
+        "Order Id": String,	
+        "Shipment Id": String,
+        "Shipment Date": String,
+        "Order Date": String,
+        "Shipment Item Id": String,
+        "Quantity": String,
+        "Item Description": String,
+        "Asin": String,
+        "Hsn/sac": String,
+        "Sku": String,
+        "Ship To State": String,
+        "pincode": String,
+        "Invoice Amount": String,
+        "gst": String,
+    },
 })
 
 var OrdersSchema = mongoose.model('OrdersSchema', ordersSchema);
